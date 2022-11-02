@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 // const client = new pg.Client(process.env.DATABASE_URL);
-const client = new pg.Client({ connectionString: process.env.DATABASE_URL,  ssl: { rejectUnauthorized: false } });
+const client = new pg.Client({ connectionString: process.env.DATABASE_URL2,  ssl: { rejectUnauthorized: false } });
 
 // client.connect()
 
