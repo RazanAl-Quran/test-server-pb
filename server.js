@@ -10,7 +10,9 @@ const PORT = process.env.PORT;
 const app = express();
 app.use(cors());
 app.use(express.json());
-const client = new pg.Client(process.env.DATABASE_URL);
+// const client = new pg.Client(process.env.DATABASE_URL);
+const client = new pg.Client({ connectionString: process.env.DATABASE_URL,  ssl: { rejectUnauthorized: false } });
+
 // client.connect()
 
 app.get("/", homeHandler);
