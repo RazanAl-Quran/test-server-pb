@@ -76,3 +76,5 @@ client.connect().then(() => {
     console.log(`Listening on PORT ${PORT}`);
   });
 });
+
+// this has been added to close issue #1
